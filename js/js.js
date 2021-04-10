@@ -12,7 +12,15 @@ const phrases = [
     "alex will bite you",
     "welcome to my house"
 ];
-//start button//
+//start button
 boton.addEventListener("click", function(){
     overlay.style.display = "none";
 });
+
+
+// get random sentence
+function getRandomPhraseAsArray(yo){
+   let a = math.floor(Math.random()*6);
+   let phrase = yo[n].split("");
+   return phrase; 
+}
