@@ -32,10 +32,10 @@ for (i = 0; i < characters.lenth; i++) {
 
 
 // get random sentence
-function getRandomPhraseAsArray(yo){
-   let a = math.floor(Math.random()*6);
-   let phrase = yo[n].split("");
-   return phrase; 
+function getRandomPhraseAsArray(phrases) {
+   const chosenPhrase = phrases[math.floor(Math.random()*6)];
+   const choosenLetter = chosenPhrase.split("");
+   return choosenLetter; 
 }
 
 //get characters
@@ -54,5 +54,7 @@ for(a = 0; a < keys.length; a++) {
 missed = 0;
 //resethearts
 let hearts = document.querySelector.call(".tries > img[src='images/lostHeart.png']");
-for ()
+for (b = 0; b < hearts.length; b++) {
+    hearts[b].setAttribute("src", "images/liveHeart.png")
 }
+
