@@ -13,9 +13,22 @@ const phrases = [
     "welcome to my house"
 ];
 //start button
-boton.addEventListener("click", function(){
+boton.addEventListener("click", () => {
     overlay.style.display = "none";
+
+    if (boton.textContent === "New Game") {
+        overlay.classList.remove("win","lose");
+        let completeText = overlay.querySelector("h3");
+        completeText.remove();
+    }
+
 });
+//reset phrase
+const characters =document.querySelectorAll("#phrase li");
+for (i = 0; i < characters.lenth; i++) {
+    characters[i].remove();
+}
+
 
 
 // get random sentence

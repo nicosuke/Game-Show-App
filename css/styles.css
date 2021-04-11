@@ -55,6 +55,10 @@ button {
   transition: var(--transition);
 }
 
+button:hover, .btn__reset:hover {
+  cursor:pointer;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
