@@ -37,3 +37,22 @@ function getRandomPhraseAsArray(yo){
    let phrase = yo[n].split("");
    return phrase; 
 }
+
+//get characters
+letter = document.querySelectorAll(".letter");
+
+//reset keyboard
+const keys = keyboard.querySelectorAll("button");
+for(a = 0; a < keys.length; a++) {
+    if (keys[a].className === "chosen") {
+        keys[a].removeAttribute("class");
+        keys[a].disabled = false;
+    }
+}
+
+//reset missed
+missed = 0;
+//resethearts
+let hearts = document.querySelector.call(".tries > img[src='images/lostHeart.png']");
+for ()
+}
