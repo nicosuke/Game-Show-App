@@ -48,16 +48,18 @@ if (character == " " ) {
 }
 }
 }
+addPhrase(phrases);
+const phraseLI = phrase.querySelectorAll("li.letter");
 
 
-//reset keyboard
-const keys = keyboard.querySelectorAll("button");
-for(a = 0; a < keys.length; a++) {
-    if (keys[a].className === "chosen") {
-        keys[a].removeAttribute("class");
-        keys[a].disabled = false;
-    }
-}
+function endGame(result) {
+    overlay.classList.replace("start", result);
+    screenTitle.textContent = "you " + result + "!!";
+    reset.textContent = "Play Again";
+    overlay.classList.remove("hidden");
+};
+
+
 
 
 
