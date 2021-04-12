@@ -1,9 +1,10 @@
-const keyboard = document.getElementById("querty");
-const phase = document.getElementById("phase");
-const boton = document.getElementsByClassName("btn__reset");
+const querty = document.getElementById("querty");
+const phrase = document.getElementById("phrase");
+const reset = document.querySelector(".btn__reset");
 let missed = 0;
 const overlay = document.getElementById("overlay");
-
+const screenTitle = overlay.querySelector("h2");
+const scoreBoard = document.getElementById("scoreboard");
 const phrases = [
     "hello world",
     "I like fish",
@@ -12,16 +13,17 @@ const phrases = [
     "alex will bite you",
     "welcome to my house"
 ];
-//start button
-boton.addEventListener("click", () => {
-    overlay.style.display = "none";
+let missed = 0;
+let correct = 0;
+const lose = "lose";
+const winning = "win";
 
-    if (boton.textContent === "New Game") {
-        overlay.classList.remove("win","lose");
-        let completeText = overlay.querySelector("h3");
-        completeText.remove();
-    }
-
+reset.addEventListener("click", (i) => {
+    if (i.target.textContent == "Start Game") {
+overlay.classList.add("hidden");
+    } else if (i.target.textContent == "Play Again") {
+     document.location.reload();   
+    }  
 });
 //reset phrase
 const characters =document.querySelectorAll("#phrase li");
@@ -50,8 +52,8 @@ for(a = 0; a < keys.length; a++) {
     }
 }
 
-//reset missed
-missed = 0;
+
+
 //resethearts
 let hearts = document.querySelector.call(".tries > img[src='images/lostHeart.png']");
 for (b = 0; b < hearts.length; b++) {
