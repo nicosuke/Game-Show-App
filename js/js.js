@@ -27,10 +27,10 @@ overlay.classList.add("hidden");
 });
 
 function addPhrase(arr){
-function getRandomPhraseAsArray(arr) {
-   const random = math.floor(Math.random()*6);
+function getRandomPhraseAsArray(arr){
+   const random = Math.floor(Math.random() * 6 );
    const randomPhrase = arr[random];
-   const phraseArr = ramdomPhrase.split("");
+   const phraseArr = randomPhrase.split("");
    return phraseArr; 
 };
 const phraseArr = getRandomPhraseAsArray(phrases);

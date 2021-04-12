@@ -110,7 +110,7 @@ button:hover, .btn__reset:hover {
   justify-content: center;
 }
 
-.chosen {
+button:disabled {
   background: var(--color-neutral);
   border-radius: 5px;
   font-size: var(--font-size-medium);
