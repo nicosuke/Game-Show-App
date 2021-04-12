@@ -25,6 +25,8 @@ overlay.classList.add("hidden");
      document.location.reload();   
     }  
 });
+
+
 //reset phrase
 const characters =document.querySelectorAll("#phrase li");
 for (i = 0; i < characters.lenth; i++) {
@@ -34,11 +36,12 @@ for (i = 0; i < characters.lenth; i++) {
 
 
 // get random sentence
-function getRandomPhraseAsArray(phrases) {
-   const chosenPhrase = phrases[math.floor(Math.random()*6)];
-   const choosenLetter = chosenPhrase.split("");
-   return choosenLetter; 
-}
+function getRandomPhraseAsArray(arr) {
+   const random = math.floor(Math.random()*6);
+   const randomPhrase = arr[random];
+   const phraseeArr = ramdomPhrase.split("");
+   return phraseArr; 
+};
 
 //get characters
 letter = document.querySelectorAll(".letter");
