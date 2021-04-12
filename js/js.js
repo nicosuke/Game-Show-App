@@ -13,7 +13,7 @@ const phrases = [
     "alex will bite you",
     "welcome to my house"
 ];
-let missed = 0;
+
 let correct = 0;
 const lose = "lose";
 const winning = "win";
@@ -69,9 +69,32 @@ function checkWin() {
 
 
 
-//resethearts
-let hearts = document.querySelector.call(".tries > img[src='images/lostHeart.png']");
-for (b = 0; b < hearts.length; b++) {
-    hearts[b].setAttribute("src", "images/liveHeart.png")
-}
+function removeHearts() {
+const hearts = scoreBoard.querySelectorAll('[src="images/liveHeart.png"]')[0];
+    heart.src = "images/lostHeart.png";
+};
 
+let wrong = 0;
+qwerty/addEventListener("click", (e) => {
+    if (e.target.tagName =="BUTTON") {
+        const guess = e.target.textContent;
+        const guessUpper = guess.toUpperCase();
+        e.target.disabled = true;
+        wrong = 0;
+
+        for (let i = 0; i < phraseLI.length; i++) {
+       if (guessUpper == phraseLI[i].textContent) {
+           phraseLI[i].classList.add("show");
+           correct +=1;
+           checkWin();
+       } else {
+           wrong += 1;
+           if (wrong == phraseLI.length) {
+               missed+= 1;
+               removeHearts();
+               checkWin();
+           }
+       }
+        }
+    }
+});
