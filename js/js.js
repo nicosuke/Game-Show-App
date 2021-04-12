@@ -26,25 +26,29 @@ overlay.classList.add("hidden");
     }  
 });
 
-
-//reset phrase
-const characters =document.querySelectorAll("#phrase li");
-for (i = 0; i < characters.lenth; i++) {
-    characters[i].remove();
-}
-
-
-
-// get random sentence
+function addPhrase(arr){
 function getRandomPhraseAsArray(arr) {
    const random = math.floor(Math.random()*6);
    const randomPhrase = arr[random];
-   const phraseeArr = ramdomPhrase.split("");
+   const phraseArr = ramdomPhrase.split("");
    return phraseArr; 
 };
+const phraseArr = getRandomPhraseAsArray(phrases);
 
-//get characters
-letter = document.querySelectorAll(".letter");
+for (let i = 0; i < phraseArr.lenth; i++){
+    const li = document.createElement("li");
+    const ul = phrase.querySelector("ul");
+    li.textContent = phraseArr[i].toUpperCase();
+ul.appendChild(li);
+let character = phraseArr[i];
+if (character == " " ) {
+    li.classList.add("space");
+} else {
+    li.classList.add("letter");
+}
+}
+}
+
 
 //reset keyboard
 const keys = keyboard.querySelectorAll("button");
