@@ -99,6 +99,8 @@ button:hover, .btn__reset:hover {
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: 0.8s;
+  transform: rotate(720deg);
 }
 
 /* Keyboard */
@@ -136,6 +138,7 @@ button:hover, .btn__reset:hover {
   left: 0;
   right: 0;
   border-radius: 5px;
+z-index: 1000;
 }
 
 .title {
@@ -164,4 +167,8 @@ button:hover, .btn__reset:hover {
 
 .lose a {
   color: var(--color-lose);
+}
+
+.hidden {
+  display: none !important;
 }
