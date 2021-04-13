@@ -35,7 +35,7 @@ function getRandomPhraseAsArray(arr){
 };
 const phraseArr = getRandomPhraseAsArray(phrases);
 
-for (let i = 0; i < phraseArr.lenth; i++){
+for (let i = 0; i < phraseArr.length; i++){
     const li = document.createElement("li");
     const ul = phrase.querySelector("ul");
     li.textContent = phraseArr[i].toUpperCase();
