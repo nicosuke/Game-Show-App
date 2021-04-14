@@ -70,7 +70,7 @@ function checkWin() {
 
 
 function removeHearts() {
-const hearts = scoreBoard.querySelectorAll('[src="images/liveHeart.png"]')[0];
+const heart = scoreBoard.querySelectorAll('[src="images/liveHeart.png"]')[0];
     heart.src = "images/lostHeart.png";
 };
 
